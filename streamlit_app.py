@@ -193,9 +193,9 @@ class VideoDeblurNet(nn.Module):
         return outputs
 
 class AdvancedMediaExtractor:
-    def __init__(self, api_key='AIzaSyB-VpIY25J2Mo13Q8h26Au5W218SHO6dPs'):
+    def __init__(self, api_key='AIzaSyDMEB6nytGgrxwkPJ3PfYv0EVUOvlmpcLQ'):
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-2.0-flash-thinking-exp-01-21')
+        self.model = genai.GenerativeModel('gemini-2.0-flash')
         
         # Initialize turbulence deblur model
         self.deblur_model = VideoDeblurNet()
